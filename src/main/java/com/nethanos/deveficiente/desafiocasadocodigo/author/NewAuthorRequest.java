@@ -1,12 +1,10 @@
-package com.nethanos.deveficiente.desafiocasadocodigo.requests;
+package com.nethanos.deveficiente.desafiocasadocodigo.author;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.nethanos.deveficiente.desafiocasadocodigo.domain.Author;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -14,7 +12,7 @@ import javax.validation.constraints.Size;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class NewAuthorRequest {
 
-    @NotBlank
+    @NotBlank(message = "{name.not.blank}")
     private String name;
 
     @Email
@@ -27,26 +25,13 @@ public class NewAuthorRequest {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
     public Author toEntity() {
         return new Author(this.getName(), this.getEmail(), this.getDescription());

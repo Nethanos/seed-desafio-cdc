@@ -1,12 +1,9 @@
-package com.nethanos.deveficiente.desafiocasadocodigo.controllers;
+package com.nethanos.deveficiente.desafiocasadocodigo.author;
 
-import com.nethanos.deveficiente.desafiocasadocodigo.domain.Author;
-import com.nethanos.deveficiente.desafiocasadocodigo.requests.NewAuthorRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityManager;

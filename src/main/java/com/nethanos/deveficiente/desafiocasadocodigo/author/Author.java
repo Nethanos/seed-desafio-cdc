@@ -1,4 +1,4 @@
-package com.nethanos.deveficiente.desafiocasadocodigo.domain;
+package com.nethanos.deveficiente.desafiocasadocodigo.author;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
