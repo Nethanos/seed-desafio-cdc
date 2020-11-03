@@ -14,8 +14,11 @@ public class Author {
     @Id
     private UUID id;
 
+    @NotBlank
     private String name;
 
+    @NotBlank
+    @Email
     private String email;
 
     private String description;
